@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apt Pro Sports Category Responsive Website Template | Login :: W3layouts</title>
+    <link rel="stylesheet" href="css/style-freedom.css">
+    <link href="http://fonts.googleapis.com/css?family=Proza+Libre:400,400i,500,600,700&amp;display=swap"
+        rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/tiny -slider.css">
+    <link rel="stylesheet" href="css/glightbox.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+
+<script src="js/jquery.js"></script>
+<script src="js/session.js"></script>
+<script src="js/server.js"></script>
+
+    <script src="js/tailwind.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
+    <script type="text/javascript">
+        
+       onload=function(){
+
+        // alert("dd")
+
+        fetch("js/programs.json")
+        .then((res) => {
+        return res.json();
+    })
+    .then((data) => {
+    programtitle.innerHTML=data.data[0].title
+        programnote.innerHTML=data.data[0].note
+        programimg.setAttribute('src', data.data[0].bimg); 
+        tcost.setAttribute('value', data.data[0].cost);
+    }
+    );
+
+       }
+
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+    <div class="top-wrap">
+        <div class="container-xl">
+          <div class="row justify-content-end">
+            <div class="col-md topper d-flex align-items-xl-center">
+              <div class="text">
+                <p class="con"><span>Free Call</span> <span>+1 234 456 78910</span></p>
+              </div>
+            </div>
+            <div class="col-md topper d-flex align-items-xl-center justify-content-end">
+              <ul class="ftco-social">
+                <li><a href="#" class="d-flex align-items-center justify-content-center"><span
+                      class="fa fa-twitter"></span></a></li>
+                <li><a href="#" class="d-flex align-items-center justify-content-center"><span
+                      class="fa fa-facebook"></span></a></li>
+                <li><a href="#" class="d-flex align-items-center justify-content-center"><span
+                      class="fa fa-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg  ftco-navbar-light">
+        <div class="container-xl">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <div class="icon d-flex align-items-center justify-content-center"><span
+                class="flaticon flaticon-weight"></span></div>
+            <span class>VitFit <small>Crossfit &amp; Fitness</small></span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span> Menu
+          </button>
+          <div class="collapse navbar-collapse border-top-custom" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-5">
+              <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+              <!-- <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li> -->
+              <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+              <li class="nav-item"><a class="nav-link" href="schedules.html">Schedules</a></li>
+              <!-- <li class="nav-item"><a class="nav-link" href="blog.html">News</a></li> -->
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <script>
+              if(isLoggedIn ){
+                document.write( '<a id="logout" style="cursor:pointer" class="btn-custom">Sign-out</a>')
+              }else{
+                document.write( 
+                  
+                '<a href="login.html" style="margin-right:20px;background:" class="btn-custom">Login</a><a href="#" class="btn-custom">Become A Member</a>'
+    
+                
+                )
+    
+              }
+              document.getElementById('logout').addEventListener('click', (e) => {
+        sessionStorage.removeItem('ozubulu')
+        location.replace("login.html")
+    })
+            </script>
+            
+    
+          </div>
+        </div>
+      </nav>
+      <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-end justify-content-center">
+            <div class="col-md-9 mb-5 text-center">
+              <p class="breadcrumbs"><span class="ms-2"><a href="index-2.html">Home <i
+                      class="fa ion-ios-arrow-round-forward"></i></a></span> <span>Contact <i
+                    class="fa ion-ios-arrow-round-forward"></i></span></p>
+              <h1 class="mb-0 bread">Contact us</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+    <section class="bg-gray-800">
+        <div class="form-hnyv-sec">
+            <div class="p-10">
+                
+                <div class="mt-10 md:mt-0">
+                    <div>
+                        <p class="text-center text-2xl text-white font-bold">
+                            Get Fit With Our Online Coach
+                        </p>
+                        <p class="d-none text-center font-bold text-red-900 md:pb-10 pb-0">
+                            Book an Appointment Today
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 grid-cols-1 w-full h-auto p-2 space-x-5">
+                        <div class="md:w-94 w-full p-5 md:p-10     space shadow-md bg-gray-900 place-content-center rounded-2xl"
+                            style="background-image: url(./svg/effect-1-1.svg)">
+                            <h4 class="text-red-700 text-center font-bold md:text-4xl text-1xl mb-10">
+                                Book an Appointment Today
+                            </h4>
+                            <p class="text-center text-green-800" id="msg"></p>
+                            <form class="text-white" id="form" >
+                                <div class="mb-5">
+                                    <label for="name" class="mb-3 block text-base font-medium text-white">
+                                        Session Type
+                                    </label>
+
+                                    <select name="session_type" id="session_type"
+                                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
+                                        <option value="VIRTUAL">VIRTUAL</option>
+                                        <option value="PHYSICAL">PHYSICAL</option>
+                                    </select>
+                                    
+                                </div>
+                                <div class="mb-5">
+                                    <label for="phone" class="mb-3 block text-base font-medium text-white">
+                                        Duration
+                                    </label>
+                                    <select  name="duration" id="duration"
+                                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
+                                        <option value="30">30 minutes</option>
+                                        <option value="60">1 Hour</option>
+                                        <option value="90">1 Hour 30 minutes</option>
+                                        <option value="120">2 Hours (max)</option>
+                                    </select>
+                                    
+                                </div>
+                                <div class="mb-5">
+                                    <label for="email" class="mb-3 block text-base font-medium text-white">
+                                        Title
+                                    </label>
+                                  
+
+
+                                        <select  name="title" id="title"
+                                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
+                                        <option value="0">8 weeks Bulking program</option>
+                                        <option value="1">8 weeks Lean Bulking program</option>
+                                        <option value="2">12 weeks Glute program plan</option>
+                                        <option value="3">60 days shredded program</option>
+                                        <option value="4">90 Days Mass Gain program</option>
+                                        <option value="5">Nutrition plan</option>
+                                    </select>
+
+
+
+
+                                    <!-- <div v-if="v$.title.$error" class="text-red-400">
+                                  {{ "* " + v$.title.$errors[0].$message }}
+                                </div> -->
+                                </div>
+
+                                <div class="-mx-3 flex flex-wrap">
+                                    <div class="w-full px-3">
+                                        <div class="mb-5">
+                                            <label for="date" class="mb-3 block text-base font-medium text-white">
+                                                Date
+                                            </label>
+
+                                            <input  type="date"
+                                                placeholder="2023-08-24" name="appointment_time" autocomplete="none"
+                                                id="appointment_time"
+                                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                            <!-- {{ bookingInfo.appointment_time }} -->
+
+                                            <!-- <div v-if="v$.appointment_time.$error" class="text-red-400">
+                                      {{ "* " + v$.appointment_time.$errors[0].$message }}
+                                    </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    if(isLoggedIn ){
+                                      document.write(' <button class="hover:shadow-form w-full rounded-md bg-[#6A64F1] hover:bg-[#423aef]duration-700 py-3 px-8 text-center text-base font-semibold text-white outline-none">Book Appointment <i id="loader" style="display: none;"  class="fa fa-spin fa-spinner"></i></button>')
+                                    }else{
+                                      document.write( 
+                                        
+                                      '<a href="login.html"><div class="hover:shadow-form w-full rounded-md bg-red-700 hover:bg-[#423aef] duration-700 py-3 px-8 text-center text-base font-semibold text-white outline-none"> Login First                                     </div></a>'
+                          
+                                      
+                                      )
+                          
+                                    }
+                                   
+                                  </script>
+                                <div>
+                                   
+
+                                    
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="w-full h-auto hidden md:block  bg-gray-900 p-5 ">
+                            <div class="">
+                                <h2 id="programtitle" class="font-bold text-red-800 text-center text-2xl underline">
+                                </h2>
+                            </div>
+
+                            <div class=" left-1 w-full top-[20px] mt-10">
+                                <p id="programnote" class="text-white text-sm text-justify leading-10">
+                                </p>
+                            </div>
+                            <div class="" style="overflow: hidden;">
+                                <img id="programimg" src=""
+                                    class="rounded-2xl hover:p-5 hover:-translate-y-6 delay-100 duration-1000">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--//form-ends-here-->
+
+        </div>
+        </div>
+
+        <!-- //coming -->
+        </div>
+
+    </section>
+
+
+<input style="display: none;" id="tcost" name="tcost" >
+
+
+    <footer class="ftco-footer">
+        <div class="container-xl">
+            <div class="row mb-5 pb-5 justify-content-between">
+                <div class="col-md-6 col-lg">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2 logo d-flex">
+                            <a class="navbar-brand d-flex align-items-center" href="index-2.html">
+                                <div class="icon d-flex align-items-center justify-content-center"><span
+                                        class="flaticon flaticon-weight"></span></div>
+                                <span class>VitFit <small>Crossfit &amp; Fitness</small></span>
+                            </a>
+                        </h2>
+                        <p>we are here to guide you on your journey towards achieving optimal health and wellness.
+                            Let's embark on this transformative path together!</p>
+                        <ul class="ftco-footer-social list-unstyled mt-2">
+                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Explore</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="fa ion-ios-arrow-round-forward me-3"></span>About Us</a>
+                            </li>
+                            <li><a href="#"><span class="fa ion-ios-arrow-round-forward me-3"></span>Trainers
+                                    Team</a></li>
+                            <li><a href="#"><span class="fa ion-ios-arrow-round-forward me-3"></span>Awesome
+                                    Classes</a></li>
+                            <li><a href="#"><span class="fa ion-ios-arrow-round-forward me-3"></span>Pricing
+                                    Packages</a></li>
+                            <li><a href="#"><span class="fa ion-ios-arrow-round-forward me-3"></span>Latest News</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Our Contacts</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St.
+                                        Mountain View, San
+                                        Francisco, California, USA</span></li>
+                                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929
+                                            210</span></a></li>
+                                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text"><span
+                                                class="__cf_email__"
+                                                data-cfemail="d8b1b6beb798a1b7adaabcb7b5b9b1b6f6bbb7b5">[email&#160;protected]</span></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="ftco-footer-widget mb-4">
+                        <div class="row g-sm-2">
+                            <h3 style="color: white;">Personal Trainer</h3>
+                            <p>A personal trainer is more than just a fitness expert; they are your confidant,
+                                motivator, and educator rolled into one. With a deep understanding of exercise
+                                science, nutrition, and lifestyle management, a personal trainer becomes your
+                                trusted partner in improving your physical, mental, and emotional well-being. We
+                                understand that everyone has unique needs and goals, and we tailor our approach to
+                                suit your individual requirements effectively.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-0 py-5 bg-darken">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">
+                            Copyright &copy;
+                            <script data-cfasync="false"
+                                src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                            template is made
+                            with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a
+                                href="https://colorlib.com/" target="_blank" rel="nofollow noopener">Colorlib</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript">
+        jQuery("#title").change(
+            function(){
+            var title=$("#title").val();
+
+            // programtitle.innerHTML=title
+                   
+
+     fetch("js/programs.json")
+        .then((res) => {
+        return res.json();
+    })
+    .then((data) => {
+        // alert(data.data[title].title)
+        // console.log(data.data[title].title)
+
+        programtitle.innerHTML=data.data[title].title
+        programnote.innerHTML=data.data[title].note
+        // document["programimg"].src = data.data[title].bimg  
+        programimg.setAttribute('src', data.data[title].bimg); 
+        tcost.setAttribute('value', data.data[title].cost);
+        // alert(data.data[title].bimg)
+
+    }
+    // 
+    // programtitle.innerHTML=data.data[title].title
+   
+    );
+    // programtitle.innerHTML=data.data[title].title
+       
+
+
+                 })
+                 </script>
+    <script>
+        // select form
+
+        const formprop = document.querySelector('#form');
+        formprop.addEventListener('submit', event => {
+           
+// console.log(headers)
+            event.preventDefault();
+            loader.style.display = ""
+            const session_type = document.getElementById("session_type").value
+            const duration = document.getElementById("duration").value
+            const title = document.getElementById("title").value
+            const appointment_time = document.getElementById("appointment_time").value
+            // const total_duration = document.getElementById("total_duration").value
+            const total_amount = document.getElementById("tcost").value
+           
+            let theDate = document.getElementById("appointment_time").value
+            //  as HTMLInputElement;
+
+if(title==0){
+    var maintitle="8 weeks Bulking program"
+}
+
+if(title==1){
+    var maintitle="8 weeks Lean Bulking program"
+}
+
+if(title==2){
+    var maintitle="12 weeks Glute program plan"
+}
+
+if(title==3){
+    var maintitle="60 days shredded program"
+}
+
+if(title==4){
+    var maintitle="90 Days Mass Gain program"
+}
+
+if(title==5){
+    var maintitle="Nutrition plan"
+}
+
+
+
+  let formatedDate = new Date(theDate);
+  let year = formatedDate.getFullYear();
+  let month = formatedDate.getMonth() + 1;
+  let day = formatedDate.getDate();
+  let dateObj = { year, month, day };
+
+  const total_Duration=parseInt(duration);
+
+  const newdur=total_Duration/30
+//   console.log(total_Duration)
+     const totalAmount=total_amount*newdur;
+  console.log(maintitle)
+
+            const data = {
+                        session_type,
+                        duration,
+                        title:maintitle,
+                        appointment_time:dateObj,
+                        total_duration:newdur,
+                        total_amount:totalAmount
+                        };
+           
+            newdata = JSON.stringify(data)
+
+            
+
+            console.log(newdata)
+
+            fetch(`${serverurl}appointment`, {
+                method: 'POST',
+                body: newdata,
+                headers,
+            }).then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data && data.success == false) {
+                        // submitbtnbefore.style.display="block";
+                        //     submitbtnafter.style.display="none";
+                        // console.log("not auth")
+                        loader.style.display = "none"
+
+                        // if(data.Error){
+                        //     var msg = "Network Error, Try again later";
+                        // }
+                        // if(data.success){
+                          
+
+                        // }
+
+                        msg.innerHTML =data.Error;
+
+                        throw data
+                    }
+
+                    msg.innerHTML =data.message;
+
+                    setTimeout(() => {
+                         window.location.href = data.data.hosted_url
+;
+                    }, 3000);
+                })
+                .catch(error => {
+                    if (data.data.Error) {
+                        var error = "Network Error, Try again later";
+                    }
+                    //  msg.innerHTML = error;
+                    loader.style.display = "none"
+
+
+
+                })
+        })
+
+
+    </script>
+
+
+
+</body>
+
+
+<!-- Mirrored from p.w3layouts.com/demosWTR/Freedom/07-12-2019/apt-pro_freedom-demo_Free/600935710/web/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Aug 2023 05:14:50 GMT -->
+
+</html>

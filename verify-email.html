@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Apt Pro Sports Category Responsive Website Template | Login :: W3layouts</title>
+  <link rel="stylesheet" href="css/style-freedom.css">
+  <link href="http://fonts.googleapis.com/css?family=Proza+Libre:400,400i,500,600,700&amp;display=swap" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/tiny-slider.css">
+  <link rel="stylesheet" href="css/glightbox.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+<body>
+<body>
+<section class="w3l-forml-main">
+	<div class="form-hnyv-sec">
+		<div class="wrapper">
+
+
+			<!--form-stars-here-->
+			<div class="logo-apt text-center">
+				<h1>
+					<!-- <a class="logo-brand" href="index.html">
+						<img src="assets/images/logo.png" alt="" title="apt Pro" style="height:50px;" />
+					</a> -->
+
+
+                    <a class="logo-brand" href="index.html">
+                        <div class="icon d-flex align-items-center justify-content-center"><span
+                            class="flaticon flaticon-weight"></span></div>
+                        <span class>Fit <small>Vit &amp; Fitness</small></span>
+                      </a>
+				</h1>
+			
+			</div>
+			<div class="form-inner-cont">
+				<h2>Confirmm Email</h2>
+                <span style="color:rgb(100, 6, 6);margin-bottom: 10px;" id="msg"></span>
+             
+				<form  class="signin-form" id="form">
+
+					<div class="form-input">
+						<input  type="number" name="otp" id="otp" placeholder="OTP" required />
+					</div>
+					<!-- <div class="form-input">
+						<input type="password" name="password" id="password" placeholder="Password" required />
+					</div> -->
+                    <div style="display: flex;">
+
+                   
+					<button class="btn" >VERIFY <span id="loader" style="display: none;" class="fa fa-spin fa-spinner"></span>  </button>
+                </div>
+
+				</form>
+			</div>
+			
+		</div>
+		<!--//form-ends-here-->
+
+	</div>
+	</div>
+
+	<!-- //coming -->
+	</div>
+
+</section>
+<script>
+    // select form
+    
+    const formprop = document.querySelector('#form');
+    formprop.addEventListener('submit',event =>{
+
+        loader.style.display=""
+        event.preventDefault();
+        const otp = document.getElementById("otp").value
+    
+
+        const data = {
+            
+             otp}
+        newdata=JSON.stringify(data)
+
+        // console.log(newdata)
+
+        fetch("http://localhost:5002/api/v1/auth/verify-email",{
+            method:'POST',
+            body:newdata,
+            headers: { 'Content-Type': 'application/json' },
+        }).then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data && data.success == false) {
+                            // submitbtnbefore.style.display="block";
+                            //     submitbtnafter.style.display="none";
+                            loader.style.display="none"
+
+                            console.log("not auth")
+                        msg.innerHTML = data.Error;
+
+                            throw data
+                        }
+
+                        msg.innerHTML = data.success;
+
+                        setTimeout(() => {
+                    window.location.href = "verify-email.html";
+                }, 3000);
+                    })
+        .catch(error =>{
+            if(error=="TypeError: Failed to fetch"){
+                msg.innerHTML="Network Error, Try again later";
+        loader.style.display="none"
+
+            }
+
+
+            // msg.innerHTML=error; 
+        
+        
+        })
+    })
+
+
+</script>
+
+
+
+</body>
+
+
+<!-- Mirrored from p.w3layouts.com/demosWTR/Freedom/07-12-2019/apt-pro_freedom-demo_Free/600935710/web/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Aug 2023 05:14:50 GMT -->
+</html>
+
