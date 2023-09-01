@@ -94,7 +94,7 @@
 
         // console.log(newdata)
 
-        fetch("http://localhost:5002/api/v1/auth/verify-email",{
+        fetch(`${serverurl}auth/verify-email`,{
             method:'POST',
             body:newdata,
             headers: { 'Content-Type': 'application/json' },
