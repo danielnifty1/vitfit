@@ -101,13 +101,13 @@
             headers: { 'Content-Type': 'application/json' },
         }).then(res => res.json())
                     .then(data => {
-                        console.log(data)
+                        // console.log(data)
                         if (data && data.success == false) {
                             // submitbtnbefore.style.display="block";
                             //     submitbtnafter.style.display="none";
                             loader.style.display="none"
 
-                            console.log("not auth")
+                            // console.log("not auth")
                         msg.innerHTML = data.Error;
 
                             throw data
