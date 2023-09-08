@@ -173,14 +173,15 @@
         <div class="col-lg-6 col-xl-7 order-lg-last py-5 heading-section" data-aos="fade-up" data-aos-delay="200"
           data-aos-duration="1000">
           <div class="py-md-5 px-lg-5">
-            <span class="subheading">Information About Us</span>
-            <h2 class="mb-4">Vit <span>Fit</span>About us</h2>
+            <!-- <span class="subheading">Information About Us</span> -->
+            <h2 class="mb-4">About <span>us</span></h2>
             <p>Welcome to VitFit where your fitness goals become our mission. As a dedicated and experienced personal trainer, I am here to guide you on your journey towards achieving optimal health and wellness. Let's embark on this transformative path together!</p>
             <ul>
               <li><a href="#"><span class="ion-ios-arrow-round-forward"></span> Men Fitness and Workout</a></li>
               <li><a href="#"><span class="ion-ios-arrow-round-forward"></span> Women Fitness and Workout</a></li>
               <li><a href="#"><span class="ion-ios-arrow-round-forward"></span> Personal Trainings</a></li>
             </ul>
+            <p>At VitFit, we offer comprehensive and personalized training programs designed to help you reach your desired outcomes efficiently and safely. Here are some key elements of our approach</p>
           </div>
         </div>
         <div class="col-lg-6 col-xl-5 d-flex align-items-end">
@@ -192,7 +193,7 @@
       </div>
     </div>
   </section>
-  <section class="ftco-section ftco-counter-section ftco-no-pb ftco-no-pt">
+  <!-- <section class="ftco-section ftco-counter-section ftco-no-pb ftco-no-pt">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -239,19 +240,19 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <section class="ftco-section">
     <div class="container">
-      <div class="row justify-content-center pb-5">
+      <!-- <div class="row justify-content-center pb-5">
         <div class="col-md-5 text-center heading-section" data-aos="fade-up" data-aos-duration="1000">
-          <!-- <span class="subheading">Join Us Now</span>
-           -->
+          <span class="subheading">Join Us Now</span>
+          
           <h2 class="mb-3">What <span>We</span> Offer </h2>
-          <p>At VitFit, we offer comprehensive and personalized training programs designed to help you reach your desired outcomes efficiently and safely. Here are some key elements of our approach</p>
+        
         </div>
-      </div>
-      <div class="row g-md-0">
-        <div class="col-md-4 d-flex">
+      </div> -->
+      <div class="row g-md-0" id="approach">
+        <div class="col-md-4 d-flex"  >
           <div class="services text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
             <div class="icon-svg">
               <img src="images/svg/001-fitness.svg" class="img-fluid" alt>
@@ -262,37 +263,13 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 d-flex">
-          <div class="services services-border text-center" data-aos="fade-up" data-aos-delay="100"
-            data-aos-duration="1000">
-            <div class="icon-svg">
-              <img src="images/svg/002-treadmill.svg" class="img-fluid" alt>
-            </div>
-            <div class="text">
-              <h2>Virtual FitCam </h2>
-              <p>Virtual FitCam is an innovative service that leverages technology to provide remote training sessions. Through video conferencing, clients can participate in real-time workouts with me from the comfort of their homes or any preferred location. It offers flexibility and convenience, making it suitable for clients with busy schedules or those who prefer remote training options.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex">
-          <div class="services services-border text-center" data-aos="fade-up" data-aos-delay="100"
-            data-aos-duration="1000">
-            <div class="icon-svg">
-              <img src="images/svg/003-vip-card.svg" class="img-fluid" alt>
-            </div>
-            <div class="text">
-              <h2>Custom Coaching Program </h2>
-              <p>The custom coaching program involves the creation of a comprehensive and personalized fitness plan tailored to each client's specific needs, fitness level, and goals. This program takes into account factors such as age, fitness history, medical conditions, lifestyle, and preferences. I design workouts that are challenging yet achievable, ensuring that clients progress at a pace suitable for their unique circumstances.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-    <div class="row mt-md-5">
+    <!-- <div class="row mt-md-5">
       <div class="col text-center">
         <a href="services.html" class="btn-custom">Read More <span class="ion-ios-arrow-round-forward"></span></a>
       </div>
-    </div>
+    </div> -->
   </section>
   <section class="ftco-section ftco-no-pt ftco-no-pb">
     <div class="container-fluid">
@@ -938,7 +915,7 @@ const dispalyLenght=completedata.data.length
             const numofdisplay = properties.splice(properties.length - Math.round((properties.length / 2)), 6)
             const numofdisplay2 = properties.splice()
 
-             console.log(numofdisplay2)
+            //  console.log(numofdisplay2)
 
              numofdisplay.map((values) => {
 
@@ -949,7 +926,7 @@ const dispalyLenght=completedata.data.length
               <span class="excerpt d-block">${values.title}</span>
               <span class="price"><sup>$</sup> <span class="number">${values.cost}</span></span>
               <p  style="padding:10px" >${values.note}</p>
-              <a href="#" class="btn btn-primary d-block px-2 py-3">Get Started</a>
+              <a href="book-appointment.html" class="btn btn-primary d-block px-2 py-3">Get Started</a>
             </div>
           </div>
         </div>`
@@ -959,8 +936,55 @@ const dispalyLenght=completedata.data.length
             })
             document.getElementById('showdata').innerHTML = data1
 
+ },
+
+ )
+
+
+
+ // approaches
+
+await fetch("js/services.json")
+     .then((res) => {
+     return res.json();
+ })
+ .then((completeservicedata) => {
+
+    const info = completeservicedata.data
+const dispalyLenght=completeservicedata.data.length
+    let dataApproach = "";
+
+
+    let approachesProperty = [...info]
+  console.log(info)
+
+            const approahesDisplayed= approachesProperty.splice(approachesProperty.length - Math.round((approachesProperty.length / 1)), 6)
+            const approahesDisplayed2 = approachesProperty.splice()
+
+            // console.log(approachesProperty)
+
+            approahesDisplayed.map((vals) => {
+
+              dataApproach += `   <div class="col-md-4 d-flex">
+          <div class="services text-center" >
+            <div class="icon-svg">
+              <img src="${vals.bimg}" class="img-fluid" alt>
+            </div>
+            <div class="text">
+              <h2>${vals.title}</h2>
+              <p>${vals.note}</p>
+            </div>
+          </div>
+        </div>
+                `
+
+
+
+            })
+            document.getElementById('approach').innerHTML = dataApproach
+
  }
- );
+ )
 
     }
 
