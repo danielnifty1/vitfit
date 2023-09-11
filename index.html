@@ -243,7 +243,7 @@
   </section> 
   <section class="ftco-section">
     <div class="container">
-      <!-- <div class="row justify-content-center pb-5">
+      <div class="row justify-content-center pb-5">
         <div class="col-md-5 text-center heading-section" data-aos="fade-up" data-aos-duration="1000">
           <span class="subheading">Join Us Now</span>
           
@@ -251,7 +251,17 @@
         
         </div>
       </div> -->
+      <div style="margin-top:30px" class="row justify-content-center pb-5 mt-10">
+        <div class="col-md-7 text-center heading-section" data-aos="fade-up" data-aos-duration="1000">
+          <!-- <span class="subheading">Our Pricing</span> -->
+          <h2 class="mb-3 mt-2">Our <span>approaches</span></h2>
+        </div>
+      </div>
+      
       <div class="row g-md-0" id="approach">
+                    <!-- <h1>hhhhh</h1> -->
+        
+
         <div class="col-md-4 d-flex"  >
           <div class="services text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
             <div class="icon-svg">
@@ -693,8 +703,8 @@
       <div class="container-xl">
       <div class="row justify-content-center mb-5">
         <div class="col-md-7 heading-section text-center" data-aos="fade-up" data-aos-duration="1000">
-          <span class="subheading">Our Gallery</span>
-          <h2>Recent Images</h2>
+          <!-- <span class="subheading">Our Gallery</span>   -->
+          <h2>Our Gallery</h2>
         </div>
       </div>
       <div class="row g-md-0">
@@ -1037,14 +1047,15 @@ const dispalyLenght=completeservicedata.data.length
 
             approahesDisplayed.map((vals) => {
 
-              dataApproach += `   <div class="col-md-4 d-flex">
-          <div class="services text-center" >
-            <div class="icon-svg">
-              <img src="${vals.bimg}" class="img-fluid" alt>
+              dataApproach += `   <div class="col-md-4 d-flex" >
+          <div class="services text-center"  >
+            <div style="min-height: 400px; background-image: linear-gradient(rgba(2, 0, 0, 0.5), rgba(2, 0, 0, 0.5)),
+        url(${vals.bimg});background-repeat: no-repeat;background-position:center ;background-size: cover;border-radius:10px">
+            
+            <div class="text pt-20" style="" >
+              <h2 style="color:#e1193e;padding:40px">${vals.title}</h2>
+              <p style="color:white;font-weight: bold">${vals.note}</p>
             </div>
-            <div class="text">
-              <h2>${vals.title}</h2>
-              <p>${vals.note}</p>
             </div>
           </div>
         </div>
