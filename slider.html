@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from preview.colorlib.com/theme/dazko/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Aug 2023 13:07:19 GMT -->
+
+<head>
+    <title>VitFit Gym Center</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <!-- <link rel="stylesheet" href="css/tiny-slider.css"> -->
+    <link rel="stylesheet" href="css/glightbox.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/jquery.slider.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.transitions.css" type="text/css">
+
+    <script src="js/session.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="images/fitl.png" />
+
+
+</head>
+
+<body>
+
+    <div class="row" style="position: relative;" id="myslide">
+        <div style="position: absoludte; top: 0%;left: 0%;">
+            <img id="slideImage" style="width: 100%;  filter: brightness(60%);width:100%; ;">
+        </div>
+        <div class=""
+            style="position: absolute; left: 30%; top: 30%; right: 50%;color: white; font-weight: bold; place-content:  center; width: 40%;">
+            <div id="bg" class="bg" style=" background-color: hsla(238, 48%, 87%, 0.5); ">
+                <h1 id="theprice"
+                    style="text-align: center;padding-top: 30px;color: rgb(69, 39, 240);font-weight: bold;">
+                    DYNAMIC CITY HOMES AND PROPERTIES NIG LTD
+                </h1>
+                <h6 id="theaddress" style="text-align: center;color: white;  padding-top:0px;padding-left: 10px;">
+                    Flat 155/162 peace plaza Bonsac Junction
+                    Opp. Ezenei Junction. Asaba-Benin-Lagos Express
+                </h6>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script type="text/javascript" src="js/owl.slider.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+
+</body>
+
+<script>
+        // ======================SLIDE============================================
+        $(window).load(function () {
+            initializeOwl(false);
+        });
+        var completedata = [];
+        var slide = [];
+        let slideLength;
+        currentSlide = 0;
+        address = "";
+      
+        var i = 0;
+
+        
+        
+        // console.log("data")
+      
+
+        fetch("js/programs.json").then((data) => {
+            return data.json();
+            // console.log(data.json())
+        }).then((data) => {
+            // console.log(data)
+
+            slide = data.data;
+            init()
+    
+        })
+        function init() {
+
+            slideLength = slide.length;
+            slideImage.setAttribute("src", slide.bimg);
+           
+            var theprice = slide.cost
+            var addressObj = slide.title
+          
+            // address = addressObj.house_number + " " + addressObj.street_name + " " + addressObj.city + " " + addressObj.state
+
+    
+        }
+
+        window.setInterval(() => {
+
+            if (currentSlide < slideLength) {
+                currentSlide += 1
+            }
+            if (currentSlide == slideLength) {
+                currentSlide = 0
+            }
+            console.log(slide[currentSlide].bimg)
+            slideImage.setAttribute("src", slide[currentSlide].bimg);
+            // theimage = data.images
+            var theprice = slide.cost
+            var addressObj = slide.title
+            // imgs = theimage[i].url
+            if (imgs != null) {
+                bg.style.display = "block"
+            }
+            // address = addressObj.house_number + " " + addressObj.street_name + " " + addressObj.city + " " + addressObj.state
+
+            
+
+        }, 5000)
+
+
+    </script>
+
+
+</html>
