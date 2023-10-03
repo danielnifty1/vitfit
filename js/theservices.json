@@ -1,0 +1,17 @@
+
+{"data":[
+
+    {"id":1, "title":"1 ON 1 COACHING","note":"One-on-one coaching is a personalized training approach where I work directly with a client in a private setting. This allows for focused attention on the individual's fitness level, preferences, and specific objectives", "bimg": "/images/bg_1.jpg","note1":"I assess their current fitness status, design tailored workouts, monitor progress, and offer immediate feedback and adjustments. This personalized attention helps clients stay motivated, stay on track, and achieve their fitness goals effectively."},
+    
+      {"id":2,"title":"CUSTOM COACHING PROGRAM","note":"The custom coaching program involves the creation of a comprehensive and personalized fitness plan tailored to each client's specific needs, fitness level, and goals.", "bimg": "/images/image_3.jpg","note1":"This program takes into account factors such as age, fitness history, medical conditions, lifestyle, and preferences. I design workouts that are challenging yet achievable, ensuring that clients progress at a pace suitable for their unique circumstances."},
+    
+      {"id":3,"title":"Virtual FitCam","note":"Virtual FitCam is an innovative service that leverages technology to provide remote training sessions. Through video conferencing, clients can participate in real-time workouts with me from the comfort of their homes or any preferred location.", "bimg": "/images/slide-1.jpg","note1":"Our training sessions are carefully crafted to suit your fitness level, preferences, and limitations. Whether you prefer high-intensity workouts, strength training, cardiovascular exercises, or a combination thereof, we will create a program that keeps you engaged and motivated." },
+  
+  
+  
+      {"id":4,"title":"Nutritional Plan","note":"A proper nutritional plan is crucial for overall fitness and wellness. I develop personalized nutritional plans that align with clients' fitness goals, taking into account their dietary preferences and any specific dietary requirements.", "bimg": "/images/image_3.jpg","note1":"The plan includes meal recommendations, portion control guidelines, and education about balanced nutrition to help clients make healthier food choices and sustain their fitness journey."},
+    
+      {"id":5,"title":"1Cook with You Virtually","note":"In this unique service, I virtually join clients in their kitchens to guide them through healthy cooking sessions. I provide recipes, cooking tips, and techniques that align with their nutritional goals.", "bimg": "/images/image_3.jpg","note1":"This interactive approach empowers clients to develop practical cooking skills and fosters a deeper understanding of how to incorporate nutritious and delicious meals into their daily routine." },
+    
+       {"id":6,"title":"Continuous Progress Evaluation","note":"Your progress is meticulously tracked through various assessments, such as body measurements, strength tests, and endurance assessments. Regular evaluations allow us to fine-tune your program and ensure that you consistently progress towards your goals." , "bimg": "/images/classes-4.jpg","note1":"Our training sessions are carefully crafted to suit your fitness level, preferences, and limitations. Whether you prefer high-intensity workouts, strength training, cardiovascular exercises, or a combination thereof, we will create a program that keeps you engaged and motivated."}
+    ]} 
