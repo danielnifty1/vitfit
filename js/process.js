@@ -32,7 +32,7 @@ const dispalyLenght=completedata.data.length
           <div class="block-7">
             <div class="text-center" style="min-height: 400px; background-image: linear-gradient(rgba(2, 0, 0, 0.5), rgba(2, 0, 0, 0.5)),
             url(${values.images[0].url});background-repeat: no-repeat;background-position:center ;background-size: cover;border-radius:10px;width:auto">
-              <span class="excerpt d-block">${values.title}</span>
+              <span class="excerpt d-block" style="padding:10px;color:white;font-weight:bold">${values.title}</span>
               <span class="price"><sup>$</sup> <span class="number">${values.cost}</span></span>
               <p  style="padding:10px;color:white" >${values.note}</p>
               <a href="book-appointment.html" class="btn btn-primary d-block px-2 py-3">Get Started</a>
