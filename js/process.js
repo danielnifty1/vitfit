@@ -15,7 +15,7 @@
  })
  .then((completedata) => {
     const info = completedata.data
-    console.log(info)
+    // console.log(info)
 const dispalyLenght=completedata.data.length
     let data1 = "";
 
@@ -111,7 +111,8 @@ const dispalyLenght=completedata.data.length
   }
 
   // TRAINER
-  onloaded = async function () {
+  
+    // console.log("this is ")
 
 
     var url = `${serverurl}/api/v1/about/`
@@ -127,7 +128,7 @@ const dispalyLenght=completedata.data.length
       .then((completeservicedata) => {
 
         const info = completeservicedata.data
-        console.log(info)
+        // console.log("this is ")
 
 
 
@@ -144,7 +145,7 @@ const dispalyLenght=completedata.data.length
 
       )
 
-  }
+  
 
 
       // Gallery
@@ -174,7 +175,7 @@ const dispalyLenght=completedata.data.length
               //  console.log("this is "+approachesProperty)
 
               approahesDisplayed.map((vals) => {
-                  console.log(vals)
+                  // console.log(vals)
                   dataApproach += ` 
 
                   <div class="col-md-6 col-lg-3 d-flex">
@@ -228,7 +229,7 @@ const dispalyLenght=completedata.data.length
 					//  console.log("this is "+approachesProperty)
 
 					approahesDisplayed.map((vals) => {
-						console.log(vals.image.url)
+						// console.log(vals.image.url)
 						dataApproach += ` 
 
                         <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
