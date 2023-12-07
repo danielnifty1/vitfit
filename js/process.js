@@ -128,7 +128,7 @@ const dispalyLenght=completedata.data.length
       .then((completeservicedata) => {
 
         const info = completeservicedata.data
-        // console.log("this is ")
+        console.log("this is "+info)
 
 
 
