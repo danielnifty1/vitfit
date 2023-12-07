@@ -272,89 +272,7 @@
   </section>
  
   
-  <!-- <section class="ftco-section ftco-no-pt">
-    <div class="container">
-      <div class="row justify-content-center mb-5 mt-10" style="margin-top: 30px;">
-        <div class="col-md-7 heading-section text-center" data-aos="fade-up" data-aos-duration="1000">
-          <span class="subheading">Schedules</span>
-          <h2>Fitness <span>Schedules</span></h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-          <div class="table-wrap">
-            <table class="table">
-              <thead class="thead-primary">
-                <tr>
-                  <th>Time</th>
-                  <th>Monday</th>
-                  <th>Tuesday</th>
-                  <th>Wednesday</th>
-                  <th>Thursday</th>
-                  <th>Friday</th>
-                  <th>Saturday</th>
-                  <th>Sunday</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row" class="scope">8am-9am</th>
-                  <td>Body Building</td>
-                  <td>Weight Lifting</td>
-                  <td>&nbsp;</td>
-                  <td>Yoga</td>
-                  <td>Aerobics</td>
-                  <td>Cycling</td>
-                  <td>Stretching</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="scope">10am-11am</th>
-                  <td>Weight Lifting</td>
-                  <td>Body Building</td>
-                  <td>Cardio</td>
-                  <td>Yoga</td>
-                  <td>Aerobics</td>
-                  <td>Cycling</td>
-                  <td>Stretching</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="scope">1pm-2am</th>
-                  <td>&nbsp;</td>
-                  <td>Weight Lifting</td>
-                  <td>Cardio</td>
-                  <td>Yoga</td>
-                  <td>Aerobics</td>
-                  <td>Cycling</td>
-                  <td>Stretching</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="scope">3pm-5pm</th>
-                  <td>Aerobics</td>
-                  <td>Weight Lifting</td>
-                  <td>Cardio</td>
-                  <td>Yoga</td>
-                  <td>Body Building</td>
-                  <td>&nbsp;</td>
-                  <td>Stretching</td>
-                </tr>
-                <tr>
-                  <th scope="row" class="scope">7pm-9pm</th>
-                  <td>Body Building</td>
-                  <td>Weight Lifting</td>
-                  <td>Cardio</td>
-                  <td>&nbsp;</td>
-                  <td>Aerobics</td>
-                  <td>Cycling</td>
-                  <td>Stretching</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
+  
   <section class="ftco-section ftco-no-pt ftco-no-pb ftco-trainer">
     <div class="overlay img" style="background-image: url(images/bg_5.jpg)"></div>
     <div class="container">
@@ -520,7 +438,24 @@
     </div>
   </div>
 </section>
-
+<div class="row justify-content-center mt-md-5">
+  <div class="col-xl-10">
+    <div class="row">
+      <div class="col-md-4 d-flex align-items-stretch">
+        <div class="services p-4 d-flex align-items-start" data-aos="fade-up" data-aos-delay="100"
+          data-aos-duration="1000">
+          <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-sport"></span>
+          </div>
+          <div class="text ps-4">
+            <h2>VitFit App</h2>
+            <p>Coming soon...</p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
 <footer class="ftco-footer">
   <div class="container-xl">
     <div class="row mb-5 pb-5 justify-content-between">
@@ -600,150 +535,6 @@
 
   <script type="text/javascript">
         
-//     onload=async function(){
-
-//      // alert("dd")
-
-//      var url = `${serverurl}/api/v1/program/`
-// 			// console.log(data)
-// 			fetch(url, {
-// 				method: 'GET',  // body: JSON.stringify(),
-// 				headers,
-
-// 			})
-               
-//      .then((res) => {
-//      return res.json();
-//  })
-//  .then((completedata) => {
-//     const info = completedata.data
-//     console.log(info)
-// const dispalyLenght=completedata.data.length
-//     let data1 = "";
-
-//     let properties = [...completedata.data]
-//             const numofdisplay = properties.splice(properties.length - Math.round((properties.length / 2)), 6)
-//             const numofdisplay2 = properties.splice()
-
-//             //  console.log(numofdisplay2)
-
-//              numofdisplay.map((values) => {
-
-//                 data1 += `
-//                 <div class="col-md-4 col-lg-4" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
-//           <div class="block-7">
-//             <div class="text-center">
-//               <span class="excerpt d-block">${values.title}</span>
-//               <span class="price"><sup>$</sup> <span class="number">${values.cost}</span></span>
-//               <p  style="padding:10px" >${values.note}</p>
-//               <a href="book-appointment.html" class="btn btn-primary d-block px-2 py-3">Get Started</a>
-//             </div>
-//           </div>
-//         </div>`
-
-
-
-//             })
-//             document.getElementById('showdata').innerHTML = data1
-
-//  },
-
-//  )
-
-
-
-//  // approaches
-
-// await fetch("js/approaches.json")
-//      .then((res) => {
-//      return res.json();
-//  })
-//  .then((completeservicedata) => {
-
-//     const info = completeservicedata.data
-// const dispalyLenght=completeservicedata.data.length
-//     let dataApproach = "";
-
-
-//     let approachesProperty = [...info]
-//   console.log(info)
-
-//             const approahesDisplayed= approachesProperty.splice(approachesProperty.length - Math.round((approachesProperty.length / 1)), 6)
-//             const approahesDisplayed2 = approachesProperty.splice()
-
-//             // console.log(approachesProperty)
-
-//             approahesDisplayed.map((vals) => {
-
-//               dataApproach += ` 
-//               <div class="col-md-4 col-sm-6  d-flex" >
-//           <div class="services text-center"  >
-//             <div style="min-height: 400px; background-image: linear-gradient(rgba(2, 0, 0, 0.5), rgba(2, 0, 0, 0.5)),
-//         url(${vals.bimg});background-repeat: no-repeat;background-position:center ;background-size: cover;border-radius:10px;width:auto">
-            
-//             <div class="text pt-20" style="" >
-//               <h2 style="color:#e1193e;padding:40px;font-size: 20px">${vals.title}</h2>
-//               <p style="color:white;font-weight: bold">${vals.note}</p>
-//             </div>
-//             </div>
-//           </div>
-//         </div>
-            
-//                 `
-
-
-//                 // progama.innerHTML=dataApproach;
-//             })
-//             document.getElementById('approach').innerHTML = dataApproach
-
-//  },
-
-
-//  )
-
-//     }
-
-
-
-
-
-
-
-//     // TRAINER
-// onloadd = async function () {
-
-       
-// var url = `${serverurl}/api/v1/about/`
-// // console.log(data)
-// fetch(url, {
-//     method: 'GET',  // body: JSON.stringify(),
-//     headers,
-
-// })
-//     .then((res) => {
-//         return res.json();
-//     })
-//     .then((completeservicedata) => {
-
-//         const info = completeservicedata.data
-//         console.log(info.image.url)
-
-        
-
-      
-      
-//         document.getElementById('note').innerHTML = info.note
-//         document.getElementById('img2').src = info.image.url
-//         // document.getElementById('_id').value = info._id
-
-
-
-//     },
-
-
-//     )
-
-// }
 
  </script>
   <script src="js/bootstrap.bundle.min.js"></script>
