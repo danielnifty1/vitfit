@@ -72,85 +72,37 @@
 </head>
 
 <body>
-    <div class="top-wrap">
-        <div class="container-xl">
-          <div class="row justify-content-end">
-            <div class="col-md topper d-flex align-items-xl-center">
-              <div class="text">
-                <p class="con"><span>Free Call</span> <span>+1 234 456 78910</span></p>
-              </div>
-            </div>
-            <div class="col-md topper d-flex align-items-xl-center justify-content-end">
-              <ul class="ftco-social">
-                <li><a href="#" class="d-flex align-items-center justify-content-center"><span
-                      class="fa fa-twitter"></span></a></li>
-                <li><a href="#" class="d-flex align-items-center justify-content-center"><span
-                      class="fa fa-facebook"></span></a></li>
-                <li><a href="#" class="d-flex align-items-center justify-content-center"><span
-                      class="fa fa-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav class="navbar navbar-expand-lg  ftco-navbar-light">
-        <div class="container-xl">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <div class="icon d-flex align-items-center justify-content-center"><span
-                class="flaticon flaticon-weight"></span></div>
-            <span class>VitFit <small>Crossfit &amp; Fitness</small></span>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fa fa-bars"></span> Menu
-          </button>
-          <div class="collapse navbar-collapse border-top-custom" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-5">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <!-- <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li> -->
-                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
-                <!-- <li class="nav-item"><a class="nav-link" href="blog.html">News</a></li> -->
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      
-                <li class="nav-item"><a href="book-appointment.html" class=" btn " style="padding-right: 10px; font-weight: bold; background-color:#e1193e;margin-top: 10px;padding-bottom: 8px; border-radius: 10px;color:white">Book Appointment</a></li>
-              </ul>
-            <script>
-              if(isLoggedIn ){
-                document.write( '<a id="logout" style="cursor:pointer" class="btn-custom">Sign-out</a>')
-              }else{
-                document.write( 
-                  
-                '<a href="login.html" style="margin-right:20px;background:" class="btn-custom">Login</a><a href="#" class="btn-custom">Become A Member</a>'
-    
-                
-                )
-    
-              }
-              document.getElementById('logout').addEventListener('click', (e) => {
-        sessionStorage.removeItem('ozubulu')
-        location.replace("login.html")
-    })
-            </script>
-            
-    
-          </div>
-        </div>
-      </nav>
-      <section class="hero-wrap hero-wrap-2"  >
+  <script>
+      // if(isLoggedIn ){
+      //   document.write( '<a id="logout" style="cursor:pointer" class="btn-custom">Sign-out</a>')
+      // }else{
+      //   document.write( 
+          
+      //   '<a href="login.html" style="margin-right:20px;background:" class="btn-custom">Login</a><a href="#" class="btn-custom">Become A Member</a>'
+
+        
+      //   )
+
+      // }
+    document.getElementById('logout').addEventListener('click', (e) => {
+sessionStorage.removeItem('ozubulu')
+location.replace("login.html")
+})
+  </script>
+  
+      <!-- <section class="hero-wrap hero-wrap-2" style="background-color: red;"  >
         <div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 mb-5 text-center">
-              <p class="breadcrumbs"><span class="ms-2"><a href="index-2.html">Home <i
+              <p class="breadcrumbs"><span class="ms-2"><a href="index.html">Home <i
                       class="fa ion-ios-arrow-round-forward"></i></a></span> <span>Book <i
                     class="fa ion-ios-arrow-round-forward"></i></span></p>
               <h1 class="mb-0 bread">Book Appointment With us</h1>
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
 
 
@@ -161,7 +113,7 @@
     <section class="bg-gray-800">
         <div class="form-hnyv-sec">
             <div class="p-10">
-                
+                <span class="fa fa-arrow-left bg-red-700 p-2 rounded" style="cursor: pointer;" onclick="getback()" > back</span>
                 <div class="mt-10 md:mt-0">
                     <div>
                         <p class="text-center text-2xl text-white font-bold">
@@ -404,6 +356,10 @@
 
 
     <script type="text/javascript">
+
+      function getback(){
+        history.back();
+      }
         jQuery("#title").change(
             function(){
             var title=$("#title").val();
