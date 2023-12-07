@@ -119,7 +119,7 @@ const dispalyLenght=completedata.data.length
     // console.log(data)
     fetch(url, {
       method: 'GET',  // body: JSON.stringify(),
-      headers,
+      // headers,
 
     })
       .then((res) => {
