@@ -35,24 +35,17 @@
           </div>
         </div>
         <div class="col-md topper d-flex align-items-xl-center justify-content-end">
-          <ul class="ftco-social">
-            <li><a href="#" class="d-flex align-items-center justify-content-center"><span
-                  class="fa fa-twitter"></span></a></li>
-            <li><a href="#" class="d-flex align-items-center justify-content-center"><span
-                  class="fa fa-facebook"></span></a></li>
-            <li><a href="#" class="d-flex align-items-center justify-content-center"><span
-                  class="fa fa-instagram"></span></a></li>
-          </ul>
+        
         </div>
       </div>
     </div>
   </div>
   <nav class="navbar navbar-expand-lg  ftco-navbar-light">
     <div class="container-xl">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <a class="navbar-brand d-flex align-items-center" href="index-2.html">
         <div class="icon d-flex align-items-center justify-content-center"><span
             class="flaticon flaticon-weight"></span></div>
-            <span class>VitFit <small>Crossfit &amp; Fitness</small></span>
+        <span class>VitFit <small>Crossfit &amp; Fitness</small></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +53,7 @@
       </button>
       <div class="collapse navbar-collapse border-top-custom" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-5">
-          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <!-- <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li> -->
           <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
@@ -68,21 +61,27 @@
           <!-- <li class="nav-item"><a class="nav-link" href="blog.html">News</a></li> -->
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 
-          <li class="nav-item"><a href="book-appointment.html" class=" btn " style="padding-right: 10px; font-weight: bold; background-color:#e1193e;margin-top: 10px;padding-bottom: 8px; border-radius: 10px;color:white">Book Appointment</a></li>
+          <!-- <li class="nav-item"><a href="book-appointment.html" class=" btn " style="padding-right: 10px; font-weight: bold; background-color:#e1193e;margin-top: 10px;padding-bottom: 8px; border-radius: 10px;color:white">Book Appointment</a></li> -->
         </ul>
         <script>
           if(isLoggedIn ){
             document.write( '<a id="logout" style="cursor:pointer" class="btn-custom">Sign-out</a>')
           }else{
             document.write( 
+              
             '<a href="login.html" style="margin-right:20px;background:" class="btn-custom">Login</a><a href="signup.html" class="btn-custom">Become A Member</a>'
+
+            
             )
+
           }
           document.getElementById('logout').addEventListener('click', (e) => {
               sessionStorage.removeItem('ozubulu')
               location.replace("login.html")
           })
         </script>
+        
+
       </div>
     </div>
   </nav>
