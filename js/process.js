@@ -136,6 +136,8 @@ const dispalyLenght=completedata.data.length
 
         document.getElementById('note').innerHTML = info.note
         document.getElementById('img2').src = info.image.url
+        document.getElementById('thetrainer').src = info.image.url
+
 
 
 
