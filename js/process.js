@@ -30,7 +30,7 @@ const dispalyLenght=completedata.data.length
                 data1 += `
                 <div class="col-md-4 col-lg-4" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
           <div class="block-7">
-            <div class="text-center" style="min-height: 400px; background-image: linear-gradient(rgba(2, 0, 0, 0.5), rgba(2, 0, 0, 0.5)),
+            <div class="text-center" style="min-height: 500px; background-image: linear-gradient(rgba(2, 0, 0, 0.5), rgba(2, 0, 0, 0.5)),
             url(${values.images[0].url});background-repeat: no-repeat;background-position:center ;background-size: cover;border-radius:10px;width:auto">
               <span class="excerpt d-block" style="padding:10px;color:white;font-weight:bold">${values.title}</span>
               <span class="price"><sup>$</sup> <span class="number">${values.cost}</span></span>
