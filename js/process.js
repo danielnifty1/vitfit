@@ -34,7 +34,7 @@ const dispalyLenght=completedata.data.length
             url(${values.images[0].url});background-repeat: no-repeat;background-position:center ;background-size: cover;border-radius:10px;width:auto">
               <span class="excerpt d-block" style="padding:10px;color:white;font-weight:bold">${values.title}</span>
               <span class="price"><sup>$</sup> <span class="number">${values.cost}</span></span>
-              <p  style="padding:10px;color:white" >${values.note}</p>
+              <p  style="padding:10px;color:white; margin-button:20px" >${values.note}</p>
               <a href="book-appointment.html" class="btn btn-primary d-block px-2 py-3">Get Started</a>
             </div>
           </div>
