@@ -34,7 +34,7 @@ const dispalyLenght=completedata.data.length
             url(${values.images[0].url});background-repeat: no-repeat;background-position:center ;background-size: cover;border-radius:10px;width:auto">
               <span class="excerpt d-block" style="padding:10px;color:white;font-weight:bold">${values.title}</span>
               <span class="price"><sup>$</sup> <span class="number">${values.cost}</span></span>
-              <p  style="padding:10px;color:white; margin-button:20px" >${values.note}</p>
+              <p  style="padding:10px;color:white; margin-button:20px;text-align:justify; margin-bottom:30px" >${values.note}</p>
               <a href="book-appointment.html" class="btn btn-primary d-block px-2 py-3">Get Started</a>
             </div>
           </div>
@@ -90,7 +90,7 @@ const dispalyLenght=completedata.data.length
           
           <div class="text pt-20" style="" >
             <h2 style="color:#e1193e;padding:40px;font-size: 20px">${vals.title}</h2>
-            <p style="color:white;font-weight: bold">${vals.note}</p>
+            <p style="color:white;font-weight: bold;text-align:justify;padding:10px">${vals.note}</p>
           </div>
           </div>
         </div>
@@ -188,7 +188,7 @@ const dispalyLenght=completedata.data.length
                     <div class="text">
                      
                       <h3 class="heading mb-3"><a href="#">${vals.title}</a></h3>
-                      <p>${vals.note}</p>
+                      <p style="text-align:justify-all">${vals.note}</p>
                     </div>
                   </div>
                 </div>
