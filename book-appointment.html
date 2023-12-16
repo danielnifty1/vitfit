@@ -166,12 +166,12 @@ location.replace("login.html")
 
                                         <select  name="title" id="title"
                                         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
-                                        <option value="0">8 weeks Bulking program</option>
-                                        <option value="1">8 weeks Lean Bulking program</option>
+                                        <!-- <option id="bookvalue" ></option> -->
+                                        <!-- <option value="1">8 weeks Lean Bulking program</option>
                                         <option value="2">12 weeks Glute program plan</option>
                                         <option value="3">60 days shredded program</option>
-                                        <option value="4">90 Days Mass Gain program</option>
-                                        <option value="5">Nutrition plan</option>
+                                        <option value="4">90 Days` Mass Gain program</option>
+                                        <option value="5">Nutrition plan</option> -->
                                     </select>
 
 
@@ -353,33 +353,123 @@ location.replace("login.html")
       </div>
     </div>
   </footer>
+  <script type="text/javascript" src="js/server.js"></script>
+  <script type="text/javascript">
+        
+    onload=async function(){
 
+     // alert("dd")
+
+     var url = `${serverurl}/api/v1/program/`
+			// console.log(data)
+			fetch(url, {
+				method: 'GET',  // body: JSON.stringify(),
+				headers,
+
+			})
+     .then((res) => {
+     return res.json();
+ })
+ .then((completedata) => {
+    const info = completedata.data
+const dispalyLenght=completedata.data.length
+    let book = "";
+
+    let properties = [...completedata.data]
+            const numofdisplay = properties.splice(properties.length - Math.round((properties.length / 2)), 6)
+            const numofdisplay2 = properties.splice()
+
+             console.log(numofdisplay2)
+
+
+             programtitle.innerHTML=info[0].title
+        programnote.innerHTML=info[0].note
+        // document["programimg"].src = info.info[0].bimg  
+        programimg.setAttribute('src', info[0].images[0].url); 
+        tcost.setAttribute('value', info[0].cost);
+
+
+
+
+             info.map((values,i) => {
+
+           
+
+        book+=`
+        <option value="${i}" id="${i}">${values.title}</option>
+        `
+
+            })
+            // document.getElementById('showdata').innerHTML = data1
+            document.getElementById('title').innerHTML = book
+
+
+ }
+ );
+
+    }
+
+
+
+ </script>
+
+  <!-- <script type="text/javascript" src="js/process.js"></script> -->
 
     <script type="text/javascript">
-
+//  go back to previous page
       function getback(){
-        history.back();
+       const back= history.back();
+       if(!back){
+        location.replace("index.html")
+       }
       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         jQuery("#title").change(
             function(){
             var title=$("#title").val();
+            console.log(title)
 
             // programtitle.innerHTML=title
                    
 
-     fetch("js/programs.json")
-        .then((res) => {
-        return res.json();
-    })
-    .then((data) => {
+            var url = `${serverurl}/api/v1/program/`
+			// console.log(data)
+			fetch(url, {
+				method: 'GET',  // body: JSON.stringify(),
+				headers,
+
+			})
+     .then((res) => {
+     return res.json();
+ })
+ .then((completedata) => {
+      data=completedata.data
+
+      // console.log(data)
+      
         // alert(data.data[title].title)
         // console.log(data.data[title].title)
 
-        programtitle.innerHTML=data.data[title].title
-        programnote.innerHTML=data.data[title].note
+        programtitle.innerHTML=data[title].title
+        programnote.innerHTML=data[title].note
         // document["programimg"].src = data.data[title].bimg  
-        programimg.setAttribute('src', data.data[title].bimg); 
-        tcost.setAttribute('value', data.data[title].cost);
+        programimg.setAttribute('src', data[title].images[0].url); 
+        tcost.setAttribute('value', data[title].cost);
         // alert(data.data[title].bimg)
 
     }
@@ -518,6 +608,33 @@ if(title==5){
     </script>
 
 
+<script>
+  
+//   onload=async function(){
+
+// // alert("dd")
+
+// var url = `${serverurl}/api/v1/program/`
+//  // console.log(data)
+//  fetch(url, {
+//    method: 'GET',  // body: JSON.stringify(),
+//    headers,
+
+//  })
+// .then((res) => {
+// return res.json();
+// })
+// .then((completeddata) => {
+// const info = completeddata.data
+// const dispalyLenght=completeddata.data.length
+// console.log(info)
+
+
+
+// })
+
+//       }
+</script>
 
 </body>
 
